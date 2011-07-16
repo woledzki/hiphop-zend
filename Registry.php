@@ -70,7 +70,7 @@ class Zend_Registry extends ArrayObject
             throw new Zend_Exception('Registry is already initialized');
         }
 
-        self::setClassName(get_class($registry));
+        //self::setClassName((string) get_class($registry));
         self::$_registry = $registry;
     }
 
@@ -81,7 +81,7 @@ class Zend_Registry extends ArrayObject
      */
     protected static function init()
     {
-        self::setInstance(new self::$_registryClassName());
+        self::setInstance(new Zend_Registry());
     }
 
     /**
@@ -96,25 +96,17 @@ class Zend_Registry extends ArrayObject
      */
     public static function setClassName($registryClassName = 'Zend_Registry')
     {
-        if (self::$_registry !== null) {
-            //require_once 'Zend/Exception.php';
-            throw new Zend_Exception('Registry is already initialized');
-        }
-
-        if (!is_string($registryClassName)) {
-            //require_once 'Zend/Exception.php';
-            throw new Zend_Exception("Argument is not a class name");
-        }
-
-        /**
-         * @see Zend_Loader
-         */
-        if (!class_exists($registryClassName)) {
-            //require_once 'Zend/Loader.php';
-            Zend_Loader::loadClass($registryClassName);
-        }
-
-        self::$_registryClassName = $registryClassName;
+//        if (self::$_registry !== null) {
+//            //require_once 'Zend/Exception.php';
+//            throw new Zend_Exception('Registry is already initialized');
+//        }
+//
+//        if (!is_string($registryClassName)) {
+//            //require_once 'Zend/Exception.php';
+//            throw new Zend_Exception("Argument is not a class name");
+//        }
+//
+//        self::$_registryClassName = $registryClassName;
     }
 
     /**
