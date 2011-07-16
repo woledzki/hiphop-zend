@@ -77,9 +77,6 @@ class Zend_Application
     {
         $this->_environment = (string) $environment;
 
-        //require_once 'Zend/Loader/Autoloader.php';
-        //$this->_autoloader = Zend_Loader_Autoloader::getInstance();
-
         if (null !== $options) {
             if (is_string($options)) {
                 $options = $this->_loadConfig($options);
@@ -317,7 +314,7 @@ class Zend_Application
         }
 
         if (!class_exists($class, false)) {
-            require_once $path;
+            //require_once $path;
             if (!class_exists($class, false)) {
                 throw new Zend_Application_Exception('Bootstrap class not found');
             }
