@@ -1,8 +1,0 @@
-#Sat Jul 16 11:48:22 BST 2011
-WARNING=DO NOT MODIFY THIS FILE IF YOU DON'T UNDERSTAND
-defaultDestination=/private/var/www/cms.hoborglabs.com/lib/Zend
-defaultVariables=
-eclipse.preferences.version=1
-includeTeamPrivateFiles=false
-map|0=/|,|,|.*|,
-useCurrentDateForDestinationFiles=false
