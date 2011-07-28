@@ -85,31 +85,6 @@ class Zend_Registry extends ArrayObject
     }
 
     /**
-     * Set the class name to use for the default registry instance.
-     * Does not affect the currently initialized instance, it only applies
-     * for the next time you instantiate.
-     *
-     * @param string $registryClassName
-     * @return void
-     * @throws Zend_Exception if the registry is initialized or if the
-     *   class name is not valid.
-     */
-    public static function setClassName($registryClassName = 'Zend_Registry')
-    {
-//        if (self::$_registry !== null) {
-//            //require_once 'Zend/Exception.php';
-//            throw new Zend_Exception('Registry is already initialized');
-//        }
-//
-//        if (!is_string($registryClassName)) {
-//            //require_once 'Zend/Exception.php';
-//            throw new Zend_Exception("Argument is not a class name");
-//        }
-//
-//        self::$_registryClassName = $registryClassName;
-    }
-
-    /**
      * Unset the default registry instance.
      * Primarily used in tearDown() in unit tests.
      * @returns void
